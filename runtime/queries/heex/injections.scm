@@ -26,3 +26,10 @@
 
 ((comment) @injection.content 
  (#set! injection.language "comment"))
+
+(tag
+ (start_tag (tag_name) @_tag_name)
+ ((text) @injection.content)
+(#eq? @_tag_name "script")
+(#set! injection.language "javascript")
+(#set! injection.combined))
